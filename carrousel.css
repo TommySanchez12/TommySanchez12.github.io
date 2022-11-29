@@ -6,28 +6,28 @@
 }
 #imagen{
   width: 100%;
+  height: 100%;
   display: flex;
   background-size: cover;
+ 
   
 }
-.retroceder ,.avanzar{
+.flechas{
 
   position: absolute;
-  display: flex;
+  width: 100%;
+  height: 100%;
   border: none;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: aqua;
+  font-size: large;
+  
   
 }
-.retroceder,.avanzar, button{
-  color: whitesmoke;
-}
-.controles,button {
-  color: #000;
-  border: none;
-  font-family:'Indie Flower', cursive;
-  text-align: center;
-  background-position: center;
-  }
 
-.controles,button:hover{
-      color: aqua;
-  }
+
+
+
