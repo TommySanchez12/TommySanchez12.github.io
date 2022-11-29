@@ -1,56 +1,95 @@
-<!DOCTYPE html>
+
 <html>
-    <head>
-        <style>
-            * {
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-            }
-            h2 {
-                display: block;
-            }
-            label{
-                display: block;
-                
-            }  
-            .error {
-                border: 2px solid red;
-            }          
-        </style>
-    </head>
-    <body>   
+<head>
     
-    <h2>Complete los campos y nos pondremos en contacto con usted</h2>
-    <a href="Index.html">Ir a inicio</a><br><br>
-    <form onsubmit="return validar()">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre"><br>
+    <style>
+        body {
+            background-color: rgb(118, 118, 242);
+        }
 
-        <label for="mail">Mail:</label>
-        <input type="text" id="mail" name="mail" ><br>
+        h2 {
+            margin-left: 35%;
+            display: inline-block;
+            width: 30%;
+            border: 3px solid blueviolet;
+            background-color: aqua;
+        }
 
-        <label for="mensaje">Mensaje:</label>
-        <input type="text" id="mensaje" name="mensaje"><br><br>
+        .content {
+            margin-left: 10%;
+            align-items: center;
+            width: 80%;
+            background-color: aquamarine;
+        }
 
-        <input type="submit" value="Enviar">
+        label {
+            display: inline-block;
+            margin-left: 35%;
+
+        }
+
+        input {
+            margin: 10px;
+            align-items: center;
+        }
+
+        .boton {
+            margin-left: 40%;
+        }
+
+        .error {
+            border: 2px solid red;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 25px;
+        }
+    </style>
+    <h2>Examen Web 1 - Tomas Sanchez </h2>
+</head>
+
+<body>
+    <div class="content">
+        <form onsubmit="return validar()">
+            <label for="nombre">Nombre:</label>
+            <input type="#" id="nombre" name="nombre"><br>
+
+            <label for="mail">Mail:</label>
+            <input type="text" id="mail" name="mail"><br>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea type="#" id="mensaje" name="mensaje"></textarea><br><br>
+
+            <input type="submit" class="boton" value="Enviar">
 
 
-    </form>
-    <ul id="ltaErrores">       
+        </form>
+    </div>
+    <div class="contenedor">
+        <p class="copy">Todos los derechos reservados - © Tomás Sanchez ;)</p>
+    </div>
+    <ul id="ltaErrores">
     </ul>
-    <ul id="ltaCorrecto">       
+    <ul id="ltaCorrecto">
     </ul>
+
+
     <script>
-        function validar(){
-            let flag= true;
+        function validar() {
+            let flag = true;
             let nombre = document.getElementById("nombre");
             let mensaje = document.getElementById("mensaje");
             let mail = document.getElementById("mail");
             let ltaErrores = document.getElementById("ltaErrores");
             let ltaCorrecto = document.getElementById("ltaCorrecto");
+            let validMail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+            var cont = 0;
             ltaErrores.innerHTML = "";
             nombre.classList.remove("error");
-            mail.classList.remove("error");
+            mensaje.classList.remove("error");
 
             if (nombre.value == "" || nombre.value.length > 200) {
                 console.log("Nombre Inválido");
@@ -60,24 +99,45 @@
                 nombre.classList.add("error");
                 flag = false;
             }
-            if (mail.value == "" || mail.value.length > 200) {
-                console.log("Mail Inválido");
+
+            if (mensaje.value == "" || mensaje.value.length > 200 || mensaje.value.length < 10) {
+                console.log("Mensaje Inválido");
                 let item = document.createElement("li");
                 ltaErrores.appendChild(item);
-                item.innerHTML = "Mail Inválido";
-                mail.classList.add("error");
+                item.innerHTML = "Mensaje Inválido";
+                mensaje.classList.add("error");
                 flag = false;
             }
 
-            if (flag) {
+             if (!validMail.test(mail.value) && mail.value != "") {
                 let item = document.createElement("li");
-                ltaCorrecto.appendChild(item);
-                item.innerHTML = "Los datos enviados son: Nombre: "+ nombre.value + " Mail: "+ mail.value + " Mensaje: "+ mensaje.value ; 
+                ltaErrores.appendChild(item);
+                item.innerHTML = "Mail Inválido";
+                flag = false;
+
             }
-            
+
+            if (flag) {
+                if (mail.value != "") {
+                    let item = document.createElement("li");
+                    ltaCorrecto.appendChild(item);
+                    item.innerHTML = nombre.value + " (" + mail.value + ") dice: " + mensaje.value;
+                    ltaErrores.innerHTML = "";
+                    mensaje.value = "";
+                } else {
+                    let item = document.createElement("li");
+                    ltaCorrecto.appendChild(item);
+                    item.innerHTML = nombre.value + " dice " + mensaje.value;
+                    ltaErrores.innerHTML = "";
+                    mensaje.value = "";
+                }
+
+            }
+
             return false;
         }
 
     </script>
-    </body>
+</body>
+
 </html>
