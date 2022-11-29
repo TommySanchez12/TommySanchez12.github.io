@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            * {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            }
+            h2 {
+                display: block;
+            }
+            label{
+                display: block;
+                
+            }  
+            .error {
+                border: 2px solid red;
+            }          
+        </style>
+    </head>
+    <body>   
+    
+    <h2>Complete los campos y nos pondremos en contacto con usted</h2>
+    <a href="Index.html">Ir a inicio</a><br><br>
+    <form onsubmit="return validar()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+
+        <label for="mail">Mail:</label>
+        <input type="text" id="mail" name="mail" ><br>
+
+        <label for="mensaje">Mensaje:</label>
+        <input type="text" id="mensaje" name="mensaje"><br><br>
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+    <ul id="ltaErrores">       
+    </ul>
+    <ul id="ltaCorrecto">       
+    </ul>
+    <script>
+        function validar(){
+            let flag= true;
+            let nombre = document.getElementById("nombre");
+            let mensaje = document.getElementById("mensaje");
+            let mail = document.getElementById("mail");
+            let ltaErrores = document.getElementById("ltaErrores");
+            let ltaCorrecto = document.getElementById("ltaCorrecto");
+            ltaErrores.innerHTML = "";
+            nombre.classList.remove("error");
+            mail.classList.remove("error");
+
+            if (nombre.value == "" || nombre.value.length > 200) {
+                console.log("Nombre Inválido");
+                let item = document.createElement("li");
+                ltaErrores.appendChild(item);
+                item.innerHTML = "Nombre Inválido";
+                nombre.classList.add("error");
+                flag = false;
+            }
+            if (mail.value == "" || mail.value.length > 200) {
+                console.log("Mail Inválido");
+                let item = document.createElement("li");
+                ltaErrores.appendChild(item);
+                item.innerHTML = "Mail Inválido";
+                mail.classList.add("error");
+                flag = false;
+            }
+
+            if (flag) {
+                let item = document.createElement("li");
+                ltaCorrecto.appendChild(item);
+                item.innerHTML = "Los datos enviados son: Nombre: "+ nombre.value + " Mail: "+ mail.value + " Mensaje: "+ mensaje.value ; 
+            }
+            
+            return false;
+        }
+
+    </script>
+    </body>
+</html>
