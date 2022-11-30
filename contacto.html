@@ -1,8 +1,7 @@
-
 <html>
 
 <head>
-    
+
     <style>
         body {
             background-image: url(img/contacto.jpg);
@@ -12,22 +11,25 @@
             margin-left: 35%;
             text-align: center;
             display: inline-block;
+            font-style: italic;
+            color: white;
             width: 30%;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-           
+
         }
 
         .content {
             margin-left: 10%;
             align-items: center;
             width: 80%;
-            background-color: aquamarine;
-            border-style: groove;
+
+
         }
 
         label {
             display: inline-block;
             margin-left: 35%;
+            color: white;
 
         }
 
@@ -46,10 +48,19 @@
 
         .contenedor {
             display: flex;
+            height: 200px;
+
+
+        }
+
+        footer {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             padding-bottom: 25px;
         }
     </style>
+    <a class="inicio" href="index.html">Ir a inicio</a>
     <h2>Envienos su consulta</h2>
 </head>
 
@@ -71,14 +82,16 @@
         </form>
     </div>
     <div class="contenedor">
-        <p class="copy">Todos los derechos reservados - © Zoho Coders</p>
+        <ul id="ltaErrores">
+        </ul>
+        <ul id="ltaCorrecto">
+        </ul>
     </div>
-    <ul id="ltaErrores">
-    </ul>
-    <ul id="ltaCorrecto">
-    </ul>
 
 
+    <footer>
+        <p class="copy">Todos los derechos reservados - © Zoho Coders</p>
+    </footer>
     <script>
         function validar() {
             let flag = true;
@@ -94,24 +107,26 @@
             mensaje.classList.remove("error");
 
             if (nombre.value == "" || nombre.value.length > 200) {
-                console.log("Nombre Inválido");
+                /*console.log("Nombre Inválido");
                 let item = document.createElement("li");
                 ltaErrores.appendChild(item);
-                item.innerHTML = "Nombre Inválido";
+                */
                 nombre.classList.add("error");
+                alert('Complete el campo Nombre');
                 flag = false;
             }
 
             if (mensaje.value == "" || mensaje.value.length > 200 || mensaje.value.length < 10) {
-                console.log("Mensaje Inválido");
-                let item = document.createElement("li");
-                ltaErrores.appendChild(item);
-                item.innerHTML = "Mensaje Inválido";
+                /* console.log("Mensaje Inválido");
+                 let item = document.createElement("li");
+                 ltaErrores.appendChild(item);
+                 */
                 mensaje.classList.add("error");
+                alert('Complete el campo Mensaje');
                 flag = false;
             }
 
-             if (!validMail.test(mail.value) && mail.value != "") {
+            if (!validMail.test(mail.value) && mail.value != "") {
                 let item = document.createElement("li");
                 ltaErrores.appendChild(item);
                 item.innerHTML = "Mail Inválido";
@@ -119,27 +134,28 @@
 
             }
 
-            if (flag) {
-                if (mail.value != "") {
-                    let item = document.createElement("li");
-                    ltaCorrecto.appendChild(item);
-                    item.innerHTML = nombre.value + " (" + mail.value + ") dice: " + mensaje.value;
-                    ltaErrores.innerHTML = "";
-                    mensaje.value = "";
-                } else {
-                    let item = document.createElement("li");
-                    ltaCorrecto.appendChild(item);
-                    item.innerHTML = nombre.value + " dice " + mensaje.value;
-                    ltaErrores.innerHTML = "";
-                    mensaje.value = "";
-                }
-
-            }
+            /*  if (flag) {
+                  if (mail.value != "") {
+                      let item = document.createElement("li");
+                      ltaCorrecto.appendChild(item);
+                      item.innerHTML = nombre.value + " (" + mail.value + ") dice: " + mensaje.value;
+                      ltaErrores.innerHTML = "";
+                      mensaje.value = "";
+                  } else {
+                      let item = document.createElement("li");
+                      ltaCorrecto.appendChild(item);
+                      item.innerHTML = nombre.value + " dice " + mensaje.value;
+                      ltaErrores.innerHTML = "";
+                      mensaje.value = "";
+                  }
+  
+              }*/
 
             return false;
         }
 
     </script>
+
 </body>
 
 </html>

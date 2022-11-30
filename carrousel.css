@@ -25,7 +25,15 @@
   color: aqua;
   font-size: large;
   
-  
+}
+
+#retroceder{
+    margin-right: 20px;
+
+}
+#avanzar{
+  margin-left: 20px;
+
 }
 
 
