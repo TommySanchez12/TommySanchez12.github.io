@@ -7,6 +7,7 @@
             background-image: url(img/contacto.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         h2 {
@@ -129,36 +130,36 @@
             mensaje.classList.remove("error");
 
             if (nombre.value == "" || nombre.value.length > 200) {
-                /*console.log("Nombre Inválido");
+                console.log("Nombre Inválido");
                 let item = document.createElement("li");
                 ltaErrores.appendChild(item);
-                */
+                
                 nombre.classList.add("error");
-                alert('Complete el campo Nombre');
+               
                 flag = false;
             }
 
             if (mensaje.value == "" || mensaje.value.length > 200 || mensaje.value.length < 10) {
-                /* console.log("Mensaje Inválido");
+                 console.log("Mensaje Inválido");
                  let item = document.createElement("li");
                  ltaErrores.appendChild(item);
-                 */
+                 
                 mensaje.classList.add("error");
-                alert('Complete el campo Mensaje');
+                
                 flag = false;
             }
 
             if (!validMail.test(mail.value) && mail.value != "") {
-                /* let item = document.createElement("li");
+                 let item = document.createElement("li");
                  ltaErrores.appendChild(item);
-                 item.innerHTML = "Mail Inválido";*/
-                alert('Verifique el email');
+                 item.innerHTML = "Mail Inválido";
+               
                 flag = false;
 
             }
 
             if (flag) {
-                /*  if (mail.value != "") {
+                  if (mail.value != "") {
                       let item = document.createElement("li");
                       ltaCorrecto.appendChild(item);
                       item.innerHTML = nombre.value + " (" + mail.value + ") dice: " + mensaje.value;
@@ -170,9 +171,9 @@
                       item.innerHTML = nombre.value + " dice " + mensaje.value;
                       ltaErrores.innerHTML = "";
                       mensaje.value = "";
-                  }*/
+                  }
                 alert('Datos enviados correctamente');
-                window.location.href = "https://tommysanchez12.github.io/index";
+               // window.location.href = "https://tommysanchez12.github.io/index";
             }
 
             return false;
