@@ -29,6 +29,7 @@
         label {
             display: inline-block;
             margin-left: 35%;
+            
             color: white;
 
         }
@@ -52,6 +53,9 @@
 
 
         }
+        #inicio{
+            border: 2px solid black;
+        }
 
         footer {
             display: flex;
@@ -60,11 +64,12 @@
             padding-bottom: 25px;
         }
     </style>
-    <a class="inicio" href="index.html">Ir a inicio</a>
+    
     <h2>Envienos su consulta</h2>
 </head>
 
 <body>
+    <a id="inicio" href="index.html">Ir a inicio</a>
     <div class="content">
         <form onsubmit="return validar()">
             <label for="nombre">Nombre:</label>
@@ -151,7 +156,7 @@
                       mensaje.value = "";
                   }*/
                   alert('Datos enviados correctamente');
-                  
+                  window.location.href = "https://tommysanchez12.github.io/index";
               }
 
             return false;
