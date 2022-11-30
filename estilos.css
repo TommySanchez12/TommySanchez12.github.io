@@ -33,6 +33,9 @@
       h1{
           float: left;
       }
+      h2{
+        font-style: italic;
+      }
       
       
       header .contenedor{
@@ -44,17 +47,21 @@
       
       section {
           width: 100%;
-          margin-bottom: 25px;
+          margin-bottom: 40px;
+          
       }
       
       #bienvenidos {
-            height: 150px;
+            height: 130px;
           text-align: center;
+          font-family: cursive;
           font-size: 150%;
           opacity: 0.9;
           background: rgb(133, 249, 133);
+          
            
       }
+      
       
       footer .contenedor{
       display: flex;
@@ -67,14 +74,4 @@
       
       }
       
-      .sociales {
-          width: 100%;
-          text-align: center;
-          font-size: 35px;
       
-      }
-      .sociales a{
-          color: #333;
-          text-decoration: none;
-          font-size: 28px;
-      }

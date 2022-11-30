@@ -88,11 +88,12 @@
         </ul>
     </div>
 
-
+    
     <footer>
         <p class="copy">Todos los derechos reservados - © Zoho Coders</p>
     </footer>
     <script>
+        
         function validar() {
             let flag = true;
             let nombre = document.getElementById("nombre");
@@ -127,15 +128,16 @@
             }
 
             if (!validMail.test(mail.value) && mail.value != "") {
-                let item = document.createElement("li");
+               /* let item = document.createElement("li");
                 ltaErrores.appendChild(item);
-                item.innerHTML = "Mail Inválido";
+                item.innerHTML = "Mail Inválido";*/
+                alert('Verifique el email');
                 flag = false;
 
             }
 
-            /*  if (flag) {
-                  if (mail.value != "") {
+              if (flag) {
+                /*  if (mail.value != "") {
                       let item = document.createElement("li");
                       ltaCorrecto.appendChild(item);
                       item.innerHTML = nombre.value + " (" + mail.value + ") dice: " + mensaje.value;
@@ -147,9 +149,10 @@
                       item.innerHTML = nombre.value + " dice " + mensaje.value;
                       ltaErrores.innerHTML = "";
                       mensaje.value = "";
-                  }
-  
-              }*/
+                  }*/
+                  alert('Datos enviados correctamente');
+                  
+              }
 
             return false;
         }
