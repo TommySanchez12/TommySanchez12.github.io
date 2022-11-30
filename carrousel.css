@@ -27,9 +27,13 @@
   
 }
 
-#retroceder{
+#retroceder {
     margin-right: 20px;
-
+    
+}
+#retroceder i:hover{
+  
+  background-color: beige;
 }
 #avanzar{
   margin-left: 20px;

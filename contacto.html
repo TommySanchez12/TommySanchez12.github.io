@@ -29,7 +29,7 @@
         label {
             display: inline-block;
             margin-left: 35%;
-            
+
             color: white;
 
         }
@@ -53,8 +53,19 @@
 
 
         }
-        #inicio{
-            border: 2px solid black;
+
+        #inicio a {
+            display: block;
+            width: 100px;
+            color: #fff;
+            text-decoration: none;
+            padding: 7px;
+            margin: 10px;
+            border-bottom: 5px, #fff;
+        }
+
+        #inicio a:hover {
+            background: rgba(51, 51, 51, 0.5);
         }
 
         footer {
@@ -64,7 +75,7 @@
             padding-bottom: 25px;
         }
     </style>
-    
+
     <h2>Envienos su consulta</h2>
 </head>
 
@@ -93,12 +104,12 @@
         </ul>
     </div>
 
-    
+
     <footer>
         <p class="copy">Todos los derechos reservados - © Zoho Coders</p>
     </footer>
     <script>
-        
+
         function validar() {
             let flag = true;
             let nombre = document.getElementById("nombre");
@@ -133,15 +144,15 @@
             }
 
             if (!validMail.test(mail.value) && mail.value != "") {
-               /* let item = document.createElement("li");
-                ltaErrores.appendChild(item);
-                item.innerHTML = "Mail Inválido";*/
+                /* let item = document.createElement("li");
+                 ltaErrores.appendChild(item);
+                 item.innerHTML = "Mail Inválido";*/
                 alert('Verifique el email');
                 flag = false;
 
             }
 
-              if (flag) {
+            if (flag) {
                 /*  if (mail.value != "") {
                       let item = document.createElement("li");
                       ltaCorrecto.appendChild(item);
@@ -155,9 +166,9 @@
                       ltaErrores.innerHTML = "";
                       mensaje.value = "";
                   }*/
-                  alert('Datos enviados correctamente');
-                  window.location.href = "https://tommysanchez12.github.io/index";
-              }
+                alert('Datos enviados correctamente');
+                window.location.href = "https://tommysanchez12.github.io/index";
+            }
 
             return false;
         }
