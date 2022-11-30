@@ -22,7 +22,6 @@ function pasarFoto(){
     renderizarImagen();
 }
 
-/*Funcion que cambia la imagen a la posicion anterior */
 
 function retrocederFoto(){
     if(posicionActual <= 0) {
@@ -34,15 +33,12 @@ function retrocederFoto(){
     renderizarImagen();
 }
 
-/*Funcion que actualiza la imagen dependiendo la posicion */
 
 function renderizarImagen() {
     $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
 }
 
-// Eventos
 $botonAvanzar.addEventListener('click', pasarFoto);
 $botonRetroceder.addEventListener('click', retrocederFoto);
-// Iniciar
 renderizarImagen();
 }
