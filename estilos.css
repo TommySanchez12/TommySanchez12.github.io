@@ -3,6 +3,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      overflow-x: hidden;
       }
       
       body{
@@ -47,10 +48,11 @@
       }
       
       #bienvenidos {
+            height: 150px;
           text-align: center;
           font-size: 150%;
           opacity: 0.9;
-          background: rgb(67, 219, 67);
+          background: rgb(133, 249, 133);
            
       }
       
