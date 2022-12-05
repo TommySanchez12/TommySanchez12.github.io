@@ -11,13 +11,13 @@
         }
 
         body {
-            background-image: url(img/zoho.jpg);
+
             background-size: contain;
             height: 100vh;
             background-repeat: no-repeat;
             background-attachment: fixed;
             position: relative;
-           
+
         }
 
         .encabezado {
@@ -46,25 +46,25 @@
         img {
             margin-left: 20px;
         }
-        #content{
-            background-color: aliceblue;
+
+        #columna1 {
+            position: absolute;
+            top: 0px;
+            margin-left: 2%;
+            width: 40%;
+            margin-top: 10%;
+            
         }
 
-        p {
-            font-size: 18px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            margin-top: 5%;
-            margin-bottom: 10%;
-            
-            border-left: 2px solid rgb(199, 129, 0);
-            border-right: 2px solid rgb(199, 129, 0);
+        #columna2 {
             position: absolute;
-            margin-left: 15%;
-            top: 10;
-            padding: 5px;
-            
-            
+            margin-left: 55%;
+            margin-right: 2%;
+            margin-top: 7%;
+           
         }
+
+        
 
         .volver {
 
@@ -87,72 +87,45 @@
         <h1 style="margin-top: 30px;"> Información general sobre Zoho</h1>
 
     </div>
-    <a href="index.html" class="volver">Ir a inicio</a>
+    <a href="index.html" class="volver" style="background-color: aqua; border-style: double;">Ir a inicio</a>
 
 </header>
 
 <body>
 
-    <div id="content">
-
-        <p><b> Zoho es el nombre de un conjunto de aplicaciones web desarrolladas por la empresa india Zoho Corporation,
-            antes AdventNet. <br>
-            Para poder utilizar dichas herramientas es obligatorio registrarse y la gran mayoría cuentan con una versión
-            gratuita. Fue creada en 1996. <br>
-            Las aplicaciones de Zoho se distribuyen como software como servicio (SaaS). <br><br>
-
-            <b> Generalidades </b><br><br>
-            Cada una de las aplicaciones de Zoho: <br>
-
-            Se ejecutan en cualquier navegador. <br>
-
-            * Manejan interfaces WYSIWYG limpias, claras y fáciles de usar. <br>
-            * Están dirigidas a cualquier tipo de usuario: <br><br>
-            * El que requiere crear y/o editar documentos y no desea usar (o no tiene) una suite de oficina común. <br>
-            * El que tiene a su cargo una empresa y desea mejorar su comunicación y colaboración mediante un paquete de
-            software <br>
-            bajo el modelo de SaaS (Software as a Service)] administrativo y de gestión. <br>
-
-            * El estudiante o experto en programación que desea aplicar sus conocimientos en la creación de widgets.
-            <br> <br>
-            Reúne aplicaciones de negocio, productividad y colaboración. Entre otras cosas, cuenta con características
-            como la capacidad de <br>
-            compartir archivos (colocándolos en zonas públicas) para que otras personas puedan verlos e incluso
-            editarlos, <br>
-            seguimiento de datos sobre la marcha (mientras se trabaja) con el fin de evitar la pérdida de datos,
-            importación y exportación de <br>
-            archivos creados en Microsoft Office u OpenOffice.org, así como la capacidad de publicarlos en blogs o
-            bitácoras personales. <br>
-            La gran mayoría de estos productos son gratuitos. <br><br>
-
-            Partners de Zoho <br><br>
-            Zoho cuenta con una red de Partners Autorizados, organizada por países, para distribuir sus aplicaciones
-            empresariales. <br>
-            Los Partners o Resellers ofrecen soporte local y servicios de valor añadido sobre las aplicaciones, en
-            México además existe <br>
-            el modelo de Strategic Partner que tiene la función de capacitar a otros Partners y desarrollar el Canal.
-            <br><br>
-
-            Las soluciones más comúnmente distribuidas a través de un Partner son las empresariales, destacando las
-            siguientes: <br><br>
-
-            * Zoho CRM: la aplicación para la gestión de la relación con el cliente es actualmente la más demandada y
-            la que permite una <br> mayor adaptación y configuración. <br>
-            * Zoho Creator: para el desarrollo de aplicaciones <br>
-            * Zoho Project: gestor de proyectos <br>
-            * Zoho Invoice: facturación <br>
-            * Zoho Report: business inteligence. Para la obtención de Reporting avanzado. <br><br>
-            Todas estas aplicaciones empresariales permiten usar el CRM como punto de partida para construir un software
-            de gestión completo, <br>
-            integrándose entre sí. Existen proyectos de ERP muy avanzados usando la suite de Zoho.
-        </b></p>
-
-
+    <div id="columna1">
+        <div>
+            <img src="img/zohocrm.jpg" alt="" style="width: 600px; margin: 10px; ">
+            <p style="margin-left: 2%; margin: 1%; font-size: 18px;" >Zoho CRM le brinda las mejores soluciones para propósitos generales y
+                soluciones para verticales específicas en un mismo lugar. Con Canvas,
+                le damos el poder para rediseñar la interfaz de usuario de CRM y
+                crear una experiencia personalizada que se ajuste a sus necesidades y
+                preferencias específicas. Todo sin escribir una sola línea de código.</p>
+        </div>
+        <div>
+            <img src="img/zohocreator.png" alt="" style="width: 600px; margin: 10px; ">
+            <p style="margin-left: 2%; margin: 1%; font-size: 18px;" >Zoho Creator es una plataforma de desarrollo de aplicaciones de 
+                código bajo que les permite a los usuarios crear aplicaciones personalizadas por su cuenta, 
+                con una mínima experiencia en codificación.</p>
+        </div>
 
     </div>
-    <!--<p>Zoho es el nombre de un conjunto de aplicaciones web desarrolladas por la empresa india Zoho Corporation, antes AdventNet. <br>
-         Para poder utilizar dichas herramientas es obligatorio registrarse y la gran mayoría cuentan con una versión gratuita. Fue creada en 1996. <br>
-         Las aplicaciones de Zoho se distribuyen como software como servicio (SaaS).</p>-->
+    <div id="columna2">
+        <div>
+            <img src="img/zohodesk.png" alt="" style=" height: 400px; margin: 10px;">
+            <p style="margin-left: 2% ;  margin: 1%; font-size: 18px;">Zoho Desk es adecuado para muchos tipos de empresas y 
+                ofrece funciones que ayudan a su equipo a lo siguiente: Asistir a clientes en encontrar 
+                respuestas inmediatamente a través del autoservicio. Agregar y ayudar a 
+                gestionar conversaciones desde múltiples canales.</p>
+        </div>
+        <div>
+            <img src="img/zohoprojects.png" alt="" style=" height: 400px; margin-top: 10%;">
+            <p style="margin-left: 2% ;  margin: 1%; font-size: 18px;">Zoho Projects es una aplicación de gestión de proyectos online que te permite 
+                planificar un proyecto y realizar un seguimiento completo en todo momento. Crea y asigna tareas, 
+                a ti o a otros trabajadores (ya sean de la misma empresa, colaboradores externos o clientes).</p>
+        </div>
+        
+    </div>
 
 
 </body>

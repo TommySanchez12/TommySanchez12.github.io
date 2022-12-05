@@ -88,7 +88,7 @@
 <body>
     <a id="inicio" href="index.html">Ir a inicio</a>
     <div class="content">
-        <form onsubmit="return validar()">
+        <form onsubmit=" return validar()">
             <label for="nombre">Nombre:</label>
             <input type="#" id="nombre" name="nombre"><br>
 
@@ -131,8 +131,7 @@
 
             if (nombre.value == "" || nombre.value.length > 200) {
                 console.log("Nombre Inválido");
-                let item = document.createElement("li");
-                ltaErrores.appendChild(item);
+                
                 
                 nombre.classList.add("error");
                
@@ -141,8 +140,7 @@
 
             if (mensaje.value == "" || mensaje.value.length > 200 || mensaje.value.length < 10) {
                  console.log("Mensaje Inválido");
-                 let item = document.createElement("li");
-                 ltaErrores.appendChild(item);
+                 
                  
                 mensaje.classList.add("error");
                 
@@ -173,7 +171,7 @@
                       mensaje.value = "";
                   }
                 alert('Datos enviados correctamente');
-               // window.location.href = "https://tommysanchez12.github.io/index";
+                window.location.href = "https://tommysanchez12.github.io/index";
             }
 
             return false;
