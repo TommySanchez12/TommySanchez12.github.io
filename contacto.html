@@ -131,19 +131,19 @@
 
             if (nombre.value == "" || nombre.value.length > 200) {
                 console.log("Nombre Inválido");
-                
-                
+                let item = document.createElement("li");
+                 ltaErrores.appendChild(item);
+                 item.innerHTML = "Campo Nombre no aceptado - Verifique";
                 nombre.classList.add("error");
-               
                 flag = false;
             }
 
             if (mensaje.value == "" || mensaje.value.length > 200 || mensaje.value.length < 10) {
                  console.log("Mensaje Inválido");
-                 
-                 
+                 let item = document.createElement("li");
+                 ltaErrores.appendChild(item);
+                 item.innerHTML = "Mensaje no aceptado - verifique";
                 mensaje.classList.add("error");
-                
                 flag = false;
             }
 
